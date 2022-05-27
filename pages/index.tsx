@@ -9,7 +9,7 @@ import Hero from '../components/home/Hero';
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-gray-900 h-screen'>
+    <div className='bg-gray-900 h-screen w-screen'>
       <PageHead title="Senjin Solutions"
       content="IT Consulting to provide real world solutions for your business. Senjin Solutions specializes in upgrading business infrastructure with the latest and most optimized technology to fit your business model." />
       <Header />
