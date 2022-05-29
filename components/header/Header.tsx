@@ -37,13 +37,13 @@ export const Header = () => {
             ))}
           </ul>
         </div>
-        <div className="w-1/3 ml-3 md:w-auto md:hidden">
-          <GiHamburgerMenu className="text-white text-3xl" onClick={() => {
+        <div className="w-1/3 flex justify-end ml-3 md:w-auto md:hidden">
+          <GiHamburgerMenu className="text-white text-4xl" onClick={() => {
             setShowMenu(!showMenu);
             console.log('wow');
           }} />
         </div>
-        <div className="w-1/3 md:w-auto">
+        <div className="w-1/3 hidden md:block md:w-auto">
         <button type="button" className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-2 mb-2">
           Get Started</button>
         </div>

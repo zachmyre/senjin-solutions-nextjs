@@ -18,7 +18,7 @@ export const Hero = () => {
           </div>
         </div>
         <div className="sm:text-center lg:text-right flex mt-5">
-            <img src='/heroImage.png' className="shrink pl-12 ml-6 h-full rounded-full" />
+            <img src='/heroImage.png' className="shrink md:pl-12 md:ml-6 h-full rounded-full" />
         </div>
       </div>
     )
