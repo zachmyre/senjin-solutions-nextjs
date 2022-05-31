@@ -9,22 +9,22 @@ export const Features = () => {
       <h1 className="text-center rounded text-3xl tracking-tight font-bold text-gray-100">
         <span className="block">Services for you.</span>
       </h1>
-      <div className="space-y-4 mt-4">
-          <div className="flex flex-row justify-between items-center rounded-xl p-5 shadow-gray-600 shadow-lg border-2 border-gray-600 hover:bg-white">
+      <div className="space-y-6 mt-6">
+          <div className="flex flex-row justify-between items-center rounded-xl p-5 bg-white shadow-cyan-600 shadow-lg">
             <ImStatsBars className="rounded w-12 h-12 text-cyan-400 bg-transparent " />
-            <h2 className="text-right text-white text-xl font-semibold bg-transparent hover:text-black">IT Consulting Strategies</h2>
+            <h2 className="text-right text-black text-xl font-semibold bg-transparent">IT Consulting Strategies</h2>
           </div>
-          <div className="flex flex-row justify-between items-center rounded-xl p-5 shadow-gray-600 shadow-lg border-2 border-gray-600 hover:bg-white">
+          <div className="flex flex-row justify-between items-center rounded-xl p-5 bg-white shadow-cyan-600 shadow-lg">
             <FaNetworkWired className="rounded w-12 h-12 text-cyan-400 bg-transparent " />
-            <h2 className="text-right text-white text-xl font-semibold bg-transparent hover:text-black">Network and Security Architecture</h2>
+            <h2 className="text-right text-black text-xl font-semibold bg-transparent">Network and Security Architecture</h2>
           </div>
-          <div className="flex flex-row justify-between items-center rounded-xl p-5 shadow-gray-600 shadow-lg border-2 border-gray-600 hover:bg-white">
+          <div className="flex flex-row justify-between items-center rounded-xl p-5 bg-white shadow-cyan-600 shadow-lg">
             <BsFillCloudsFill className="rounded w-12 h-12 text-cyan-400 bg-transparent " />
-            <h2 className="text-right text-white text-xl font-semibold bg-transparent hover:text-black">Cloud & Data Migration</h2>
+            <h2 className="text-right text-black text-xl font-semibold bg-transparent">Cloud & Data Migration</h2>
           </div>
-          <div className="flex flex-row justify-between items-center rounded-xl p-5 shadow-gray-600 shadow-lg border-2 border-gray-600 hover:bg-white">
+          <div className="flex flex-row justify-between items-center rounded-xl p-5 bg-white shadow-cyan-600 shadow-lg">
             <MdSettingsBackupRestore className="rounded w-12 h-12 text-cyan-400 bg-transparent " />
-            <h2 className="text-right text-white text-xl font-semibold bg-transparent hover:text-black">Backup and Recovery Assistance</h2>
+            <h2 className="text-right text-black text-xl font-semibold bg-transparent">Backup and Recovery Assistance</h2>
           </div>
       </div>
     </div>
