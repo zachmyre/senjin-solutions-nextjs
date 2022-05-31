@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import PageHead from '../components/header/PageHead';
 import Header from '../components/header/Header';
 import Hero from '../components/home/Hero';
+import Features from '../components/home/Features';
 
 //https://tailwindui.com/#components
 
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <Header />
       <main>
         <Hero />
+        <Features />
       </main>
 
       <footer className={styles.footer}>
