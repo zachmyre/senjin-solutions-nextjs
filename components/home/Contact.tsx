@@ -8,7 +8,27 @@ export const Contact = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    const res = await fetch("/api/sendgrid", {
+      body: JSON.stringify({
+        email: email,
+        fullname: fullname,
+        subject: subject,
+        message: message,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      console.log(error);
+      return;
+    }
     console.log(fullname, email, subject, message);
   };
 
@@ -88,7 +108,7 @@ export const Contact = () => {
 
           <div className="flex flex-row items-center justify-start bg-gray-100">
             <button
-              type="button"
+              type="submit"
               className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-700 shadow-lg shadow-cyan-500/50 font-medium rounded-lg text-sm my-3 px-8 py-2.5 text-center mr-2 mb-2"
             >
               Submit
