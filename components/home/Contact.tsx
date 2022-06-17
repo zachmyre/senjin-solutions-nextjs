@@ -3,31 +3,80 @@ import { HiPhone, HiMail } from "react-icons/hi";
 import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 
 export const Contact = () => {
+  // States for contact form fields
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  //   Form validation state
+  const [errors, setErrors] = useState({});
+
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState("Send");
+
+  // Setting success or failure messages states
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  // Validation check method
+  const handleValidation = () => {
+    let tempErrors: any = {};
+    let isValid = true;
+
+    if (fullname.length <= 0) {
+      tempErrors["fullname"] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    if (subject.length <= 0) {
+      tempErrors["subject"] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", errors);
+    return isValid;
+  };
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    const res = await fetch("/api/sendgrid", {
-      body: JSON.stringify({
-        email: email,
-        fullname: fullname,
-        subject: subject,
-        message: message,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
+    let isValidForm = handleValidation();
 
-    const { error } = await res.json();
-    if (error) {
-      console.log(error);
-      return;
+    if (isValidForm) {
+      setButtonText("Sending");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          email: email,
+          fullname: fullname,
+          subject: subject,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const { error } = await res.json();
+      if (error) {
+        console.error(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send");
+        return;
+      }
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setButtonText("Send");
     }
     console.log(fullname, email, subject, message);
   };
@@ -111,7 +160,7 @@ export const Contact = () => {
               type="submit"
               className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-700 shadow-lg shadow-cyan-500/50 font-medium rounded-lg text-sm my-3 px-8 py-2.5 text-center mr-2 mb-2"
             >
-              Submit
+              {buttonText}
             </button>
           </div>
         </form>
