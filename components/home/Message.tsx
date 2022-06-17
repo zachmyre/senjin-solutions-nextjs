@@ -3,7 +3,25 @@ export const Message = () => {
     <div className="w-full px-4 sm:px-6 lg:px-8">
       <div className="w-full">
         <div className="flex items-center justify-between">
-          <div className="w-48 h-48 mt-12 transition ease-in-out delay-150 fill-cyan-300 hover:-translate-y-1 hover:scale-110 duration-300 shadow-xl shadow-white rounded-full">
+          <div className="w-2/3 flex flex-col space-y-4">
+            <h1 className="text-3xl tracking-tight font-extrabold text-gray-100 sm:text-3xl md:text-4xl">
+              Let the experts handle it.
+            </h1>
+            <h4 className="text-white text-md md:text-lg">
+              Allow our knowledgable team of experts to take care of your
+              problems with our strategic services and reliability. You present
+              us the problem, we provide the solution.
+            </h4>
+            <div className="rounded-md">
+              <button
+                type="button"
+                className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+          <div className="w-36 h-36 mr-2 md:mt-12 md:mr-12 md:w-60 md:h-60 transition ease-in-out delay-150 fill-cyan-300 hover:-translate-y-1 hover:scale-110 duration-300 shadow-xl shadow-white rounded-full">
             <svg
               className="w-fit h-fit bg-transparent stroke-white fill-cyan-300 "
               version="1.0"
@@ -62,22 +80,6 @@ l-64 44 15 -37 c47 -112 118 -187 223 -236 61 -29 76 -31 172 -32 101 0 108 1
                 />
               </g>
             </svg>
-          </div>
-          <div className="w-2/3 flex flex-col space-y-4">
-            <h1 className="text-xl tracking-tight font-extrabold text-gray-100 sm:text-3xl md:text-4xl">
-              Let the experts handle it.
-            </h1>
-            <h4 className="text-white text-lg">
-              Allow our knowledgable team of experts to take care of your
-              problems with our strategic services and reliability. You present
-              us the problem, we provide the solution.
-            </h4>
-            <button
-              type="button"
-              className="w-1/5 text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Learn More
-            </button>
           </div>
         </div>
       </div>
