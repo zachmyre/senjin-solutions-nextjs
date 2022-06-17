@@ -6,6 +6,7 @@ import Header from "../components/header/Header";
 import Hero from "../components/home/Hero";
 import Features from "../components/home/Features";
 import Message from "../components/home/Message";
+import Contact from "../components/home/Contact";
 
 //https://tailwindui.com/#components
 
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <Hero />
         <Features />
         <Message />
+        <Contact />
       </main>
 
       <footer className={styles.footer}>Powered by Senjin Solutions</footer>
