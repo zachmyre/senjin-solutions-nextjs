@@ -96,7 +96,7 @@ export const Contact = () => {
           </div>
         </form>
       </div>
-      <div className="my-4 md:w-1/2 md:flex md:justify-center md:my-8">
+      <div className="my-10 md:w-1/2 md:flex md:justify-center">
         <div className="w-full text-center space-y-4 md:space-y-10">
           <h1 className="text-3xl tracking-tight font-extrabold text-gray-100 sm:text-3xl md:text-4xl">
             Contact Us
