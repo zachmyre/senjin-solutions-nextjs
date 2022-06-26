@@ -4,9 +4,9 @@ export const Hero = () => {
       <div className="text-center lg:text-left">
         <h1 className="text-4xl tracking-tight font-extrabold text-gray-100 sm:text-5xl md:text-6xl">
           <span className="block">Tech Solutions for your</span>
-          <span className="block text-cyan-500">business model</span>
+          <span className="block text-primary">business model</span>
         </h1>
-        <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+        <p className="mt-3 text-base text-tertiary sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
           Upgrade your business and workflow through advanced, practical
           solutions by speaking with our team today. We are a group of experts
           that specialize in solving real world business problems through

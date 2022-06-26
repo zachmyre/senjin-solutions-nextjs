@@ -105,7 +105,7 @@ export const Contact = () => {
               setFullname(e.target.value);
             }}
             name="fullname"
-            className="rounded bg-white border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-cyan-400 font-light text-gray-500"
+            className="rounded bg-white border-1 py-2 pl-4 ring-tertiary focus:outline-none focus:rounded-md ring-1 focus:ring-primary font-light text-gray-500"
           />
 
           <label
@@ -121,7 +121,7 @@ export const Contact = () => {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className="rounded bg-white border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-cyan-400 font-light text-gray-500"
+            className="rounded bg-white border-1 py-2 pl-4 ring-tertiary focus:outline-none focus:rounded-md ring-1 focus:ring-primary font-light text-gray-500"
           />
 
           <label
@@ -137,7 +137,7 @@ export const Contact = () => {
             onChange={(e) => {
               setSubject(e.target.value);
             }}
-            className="rounded bg-white border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-cyan-400 font-light text-gray-500"
+            className="rounded bg-white border-1 py-2 pl-4 ring-tertiary focus:outline-none focus:rounded-md ring-1 focus:ring-primary font-light text-gray-500"
           />
 
           <label
@@ -152,7 +152,7 @@ export const Contact = () => {
             onChange={(e) => {
               setMessage(e.target.value);
             }}
-            className="rounded bg-white border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-cyan-400 font-light text-gray-500"
+            className="rounded bg-white border-1 py-2 pl-4 ring-tertiary focus:outline-none focus:rounded-md ring-1 focus:ring-primary font-light text-gray-500"
           ></textarea>
 
           <div className="flex flex-row items-center justify-start bg-gray-100">
@@ -172,20 +172,20 @@ export const Contact = () => {
           </h1>
           <div className="flex flex-col space-y-4 md:space-y-8 items-center justify-center">
             <div className="flex flex-col space-y-4 items-center justify-around w-1/2">
-              <HiPhone className="text-cyan-500 hover:text-gray-400 hover:cursor-pointer text-5xl bg-transparent" />
+              <HiPhone className="text-primary hover:text-tertiary hover:cursor-pointer text-5xl bg-transparent" />
               <h2 className="text-white text-2xl bg-transparent">
                 972-123-1234
               </h2>
             </div>
             <div className="flex flex-col space-y-4 items-center justify-around w-1/2">
-              <HiMail className="text-cyan-500 hover:text-gray-400 hover:cursor-pointer text-5xl bg-transparent" />
+              <HiMail className="text-primary hover:text-tertiary hover:cursor-pointer text-5xl bg-transparent" />
               <h2 className="text-white text-2xl bg-transparent">
                 support@senjinsolutions.com
               </h2>
             </div>
             <div className="flex space-x-4 items-center justify-center w-1/2">
-              <AiFillInstagram className="text-cyan-500 hover:text-gray-400 hover:cursor-pointer text-5xl bg-transparent" />
-              <AiFillFacebook className="text-cyan-500 hover:text-gray-400 hover:cursor-pointer text-5xl bg-transparent" />
+              <AiFillInstagram className="text-primary hover:text-tertiary hover:cursor-pointer text-5xl bg-transparent" />
+              <AiFillFacebook className="text-primary hover:text-tertiary hover:cursor-pointer text-5xl bg-transparent" />
             </div>
           </div>
         </div>
