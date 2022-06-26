@@ -12,7 +12,14 @@ async function sendEmail(req: any, res: any) {
         to: ["tristenputnam@outlook.com", "myrezach@live.com"], // Your email where you'll receive emails
         from: "zacharymyre@gmail.com", // your website email addressS here
         subject: `${req.body.subject}`,
-        html: `${req.body.message}`,
+        html: `
+        <h1>Senjin Solutions Email</h1>
+        <h2>Name: ${req.body.fullname}</h2>
+        <h3>Email: ${req.body.email}</h3>
+        
+        ${req.body.message}
+        
+        `,
       })
       .then((res) => {
         console.log("RESPONSE FROM SENDGRID PROMISE <3");
@@ -25,8 +32,6 @@ async function sendEmail(req: any, res: any) {
     console.log(error.body);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
-
-  return res.status(200).json({ error: "" });
 }
 
 export default sendEmail;
