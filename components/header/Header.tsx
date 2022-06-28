@@ -1,6 +1,14 @@
 import { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
 import { GiBrainTentacle, GiHamburgerMenu } from "react-icons/gi";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { MdPhone, MdOutlineEmail } from "react-icons/md";
+
 import styles from "../../styles/Home.module.css";
+
+import GradientButton from "../shared/GradientButton";
 
 const routes = [
   {
@@ -8,12 +16,12 @@ const routes = [
     path: "/",
   },
   {
-    name: "About",
-    path: "/about",
-  },
-  {
     name: "Services",
     path: "/services",
+  },
+  {
+    name: "Showcase",
+    path: "/showcase",
   },
   {
     name: "Contact",
@@ -22,59 +30,76 @@ const routes = [
 ];
 
 export const Header = () => {
+  const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="p-3 bg-gray-900 w-100">
-      <div className="flex items-center w-100 justify-center md:w-auto md:justify-between p-1">
-        <div className="flex flex-row w-1/3 md:w-auto md:flex-1 ml-4 md:ml-8 space-x-6">
-          <GiBrainTentacle className="h-12 w-12 text-cyan-400 text-gradient-to-r from-cyan-400 via-cyan-500 rounded-full to-cyan-600 shadow-cyan-500/50 shadow-lg shadow-cyan-800/80" />
-          <ul className="hidden md:flex md:flex-row md:space-x-8 text-white font-medium">
-            {routes.map((route, i) => (
-              <li
-                key={i}
-                className="flex items-center justify-center hover:text-cyan-200"
-              >
-                <a href={route.path}>{route.name}</a>
-              </li>
-            ))}
-          </ul>
+    <nav className="bg-white w-full flex">
+      <div className="w-1/2 flex items-center justify-center">
+        <div className="w-1/4 flex items-center justify-center">
+          <Link href={"/"}>
+            <a>
+              <GiBrainTentacle className="w-24 h-24 text-primary p-3 transition ease-in-out delay-150 hover:-translate-y-2 hover:rotate-12 duration-300" />
+            </a>
+          </Link>
         </div>
-        <div className="w-1/3 flex justify-end ml-3 md:w-auto md:hidden">
-          <GiHamburgerMenu
-            className="text-white text-4xl"
-            onClick={() => {
-              setShowMenu(!showMenu);
-              console.log("wow");
-            }}
-          />
-        </div>
-        <div className="w-1/3 hidden md:block md:w-auto">
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-700 shadow-lg shadow-cyan-500/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center md:mr-2 mb-2"
-          >
-            Get Started
-          </button>
+        <div className="w-3/4 text-left flex items-center justify-start space-x-12">
+          {routes.map((route, i) => (
+            <li className="text-black list-none text-lg font-bold">
+              <Link href={route.path} key={i}>
+                <a
+                  className={
+                    router.pathname == route.path
+                      ? styles.activenavlink
+                      : styles.inactivenavlink
+                  }
+                >
+                  {route.name}
+                </a>
+              </Link>
+            </li>
+          ))}
         </div>
       </div>
-      {showMenu && (
-        <div className="text-white lg:hidden">
-          <ul className={styles.fadeIn}>
-            {routes.map((route, i) => (
-              <a
-                key={i}
-                className="text-lg font-bold text-gradient-to-r from-cyan-400 via-cyan-500 rounded-full to-cyan-600 shadow-cyan-500/50 shadow-lg shadow-cyan-800/80"
-                href={route.path}
-              >
-                <li className="flex items-center justify-start p-3 border-b-2 border-b-white hover:text-cyan-200">
-                  {route.name}
-                </li>
-              </a>
-            ))}
-          </ul>
+
+      <div className="w-1/2 flex items-center justify-around space-x-12">
+        <div className="flex items-center space-x-8">
+          <div className="flex space-x-4">
+            <div className="flex items-center space-x-4 hover:text-cyan-300 hover:cursor-pointer">
+              <MdPhone className="w-6 h-6 text-primary" />
+              <h1 className="font-bold">972-123-1234</h1>
+            </div>
+            <div className="flex items-center space-x-4 hover:text-cyan-300 hover:cursor-pointer">
+              <MdOutlineEmail className="w-6 h-6 text-primary" />
+              <h1 className="font-bold">support@senjinsolutions.com</h1>
+            </div>
+          </div>
+          <a
+            href="https://www.facebook.com/senjinsolutions"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <FaFacebook className="text-primary h-8 w-6 hover:text-cyan-300" />
+          </a>
+          <a
+            href="https://www.twitter.com/senjinsolutions"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <FaTwitter className="text-primary h-8 w-6 hover:text-cyan-300" />
+          </a>
+          <a
+            href="https://www.linkedin.com/tristenputnam"
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            <FaLinkedin className="text-primary h-8 w-6 hover:text-cyan-300" />
+          </a>
         </div>
-      )}
+        <div>
+          <GradientButton title="Get Solutions Now" />
+        </div>
+      </div>
     </nav>
   );
 };

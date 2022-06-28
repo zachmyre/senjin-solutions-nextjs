@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+:root{
+    --primary-color: rgb(34 211 238);
+    --secondary-color: #FFFFFF;
+    --tertiary-color: #9ca3afd;
+  }
+
+html, body{
     background-color: rgb(17 24 39);
 }
+

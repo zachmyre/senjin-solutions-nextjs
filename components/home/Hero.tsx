@@ -1,3 +1,5 @@
+import GradientButton from "../shared/GradientButton";
+
 export const Hero = () => {
   return (
     <div className="flex flex-col md:flex-row mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
@@ -14,12 +16,7 @@ export const Hero = () => {
         </p>
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md">
-            <button
-              type="button"
-              className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-700 shadow-lg shadow-cyan-500/50 dark:shadow-lg font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Get in Touch
-            </button>
+            <GradientButton title="Get in Touch" />
           </div>
         </div>
       </div>
