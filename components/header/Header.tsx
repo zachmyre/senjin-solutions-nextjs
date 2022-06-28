@@ -29,6 +29,15 @@ const routes = [
   },
 ];
 
+const socials = {
+  linkedin: "https://www.linkedin.com/tristen.putnam",
+  facebook: "https://www.facebook.com/senjinsolutions",
+  twitter: "https://www.twitter.com/senjinsolutions",
+  phonenumber: "19721231234",
+  displayedPhonenumber: "972-123-1234",
+  email: "support@senjinsolutions.com",
+};
+
 export const Header = () => {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
@@ -65,34 +74,28 @@ export const Header = () => {
       <div className="w-1/2 flex items-center justify-around space-x-12">
         <div className="flex items-center space-x-8">
           <div className="flex space-x-4">
-            <div className="flex items-center space-x-4 hover:text-cyan-300 hover:cursor-pointer">
+            <a
+              className="flex items-center space-x-4 hover:text-cyan-300"
+              href={"tel:+" + socials.phonenumber}
+            >
               <MdPhone className="w-6 h-6 text-primary" />
-              <h1 className="font-bold">972-123-1234</h1>
-            </div>
-            <div className="flex items-center space-x-4 hover:text-cyan-300 hover:cursor-pointer">
+              <h1 className="font-bold">{socials.displayedPhonenumber}</h1>
+            </a>
+            <a
+              className="flex items-center space-x-4 hover:text-cyan-300"
+              href={"mailto:" + socials.email}
+            >
               <MdOutlineEmail className="w-6 h-6 text-primary" />
-              <h1 className="font-bold">support@senjinsolutions.com</h1>
-            </div>
+              <h1 className="font-bold">{socials.email}</h1>
+            </a>
           </div>
-          <a
-            href="https://www.facebook.com/senjinsolutions"
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
+          <a href={socials.facebook} target={"_blank"} rel={"noreferrer"}>
             <FaFacebook className="text-primary h-8 w-6 hover:text-cyan-300" />
           </a>
-          <a
-            href="https://www.twitter.com/senjinsolutions"
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
+          <a href={socials.twitter} target={"_blank"} rel={"noreferrer"}>
             <FaTwitter className="text-primary h-8 w-6 hover:text-cyan-300" />
           </a>
-          <a
-            href="https://www.linkedin.com/tristenputnam"
-            target={"_blank"}
-            rel={"noreferrer"}
-          >
+          <a href={socials.linkedin} target={"_blank"} rel={"noreferrer"}>
             <FaLinkedin className="text-primary h-8 w-6 hover:text-cyan-300" />
           </a>
         </div>
