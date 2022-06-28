@@ -54,8 +54,8 @@ export const Header = () => {
         </div>
         <div className="w-3/4 text-left flex items-center justify-start space-x-12">
           {routes.map((route, i) => (
-            <li className="text-black list-none text-lg font-bold">
-              <Link href={route.path} key={i}>
+            <li key={i} className="text-black list-none text-lg font-bold">
+              <Link href={route.path}>
                 <a
                   className={
                     router.pathname == route.path
