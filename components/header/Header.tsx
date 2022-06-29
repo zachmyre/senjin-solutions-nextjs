@@ -43,8 +43,8 @@ export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="bg-white w-full flex">
-      <div className="w-1/2 flex items-center justify-center">
+    <nav className="bg-white w-screen flex">
+      <div className="hidden lg:w-1/2 md:flex items-center justify-center">
         <div className="w-1/4 flex items-center justify-center">
           <Link href={"/"}>
             <a>
@@ -71,8 +71,8 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="w-1/2 flex items-center justify-around space-x-12">
-        <div className="flex items-center space-x-8">
+      <div className="hidden lg:w-1/2 md:flex items-center justify-around space-x-12">
+        <div className="hidden lg:flex lg:items-center lg:space-x-8">
           <div className="flex space-x-4">
             <a
               className="flex items-center space-x-4 hover:text-cyan-300"
@@ -101,6 +101,23 @@ export const Header = () => {
         </div>
         <div>
           <GradientButton title="Get Solutions Now" />
+        </div>
+      </div>
+                  {/* Mobile */}
+      <div className="md:hidden w-screen">
+      <div className="flex items-center justify-between px-6">
+        <div>
+          <Link href={"/"}>
+            <a>
+              <GiBrainTentacle className="w-20 h-20 text-primary p-3 transition ease-in-out delay-150 hover:-translate-y-2 hover:rotate-12 duration-300" />
+            </a>
+          </Link>
+          </div>
+          <div>
+          <a>
+            <GiHamburgerMenu className="w-20 h-20 text-primary p-3 hover:text-black hover:cursor-pointer" />
+          </a>
+          </div>
         </div>
       </div>
     </nav>
