@@ -7,6 +7,7 @@ import Hero from "../components/home/Hero";
 import Features from "../components/home/Features";
 import Message from "../components/home/Message";
 import Contact from "../components/home/Contact";
+import LandingPage3D from "../components/home/LandingPage3D";
 
 //https://tailwindui.com/#components
 
@@ -17,12 +18,14 @@ const Home: NextPage = () => {
         title="Senjin Solutions"
         content="IT Consulting to provide real world solutions for your business. Senjin Solutions specializes in upgrading business infrastructure with the latest and most optimized technology to fit your business model."
       />
-      <Header />
+      {/* <Header /> */}
       <main className="space-y-16">
-        <Hero />
+        <LandingPage3D />
+
+        {/* <Hero />
         <Features />
         <Message />
-        <Contact />
+        <Contact /> */}
       </main>
 
       <footer className={styles.footer}>Powered by Senjin Solutions</footer>

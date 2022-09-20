@@ -82,7 +82,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="px-4 flex flex-col md:flex-row md:mt-12">
+    <div className="flex flex-row mt-10 mx-auto max-w-7xl px-4 sm:mt-8 sm:px-6 md:mt-16 lg:px-8">
       <div className="md:w-1/2">
         <form
           onSubmit={handleSubmit}

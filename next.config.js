@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const withTM = require('next-transpile-modules')(['three']);
+
 const nextConfig = {
   reactStrictMode: true,
   env: {
@@ -6,4 +8,5 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
+module.exports = withTM();
