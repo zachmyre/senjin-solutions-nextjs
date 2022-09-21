@@ -4,7 +4,7 @@ export const LandingPageHero = () => {
   return (
     <div
       className="leading-normal tracking-normal text-indigo-400 bg-cover bg-fixed h-screen"
-      style={{ backgroundImage: `url('header.png')` }}
+      style={{ backgroundImage: `url("header.png")` }}
     >
       <div className="h-full">
         <div className="w-screen bg-gray-900 opacity-75 container rounded-b-lg px-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
