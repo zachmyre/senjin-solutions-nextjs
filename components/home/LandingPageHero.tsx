@@ -7,7 +7,10 @@ export const LandingPageHero = () => {
       style={{ backgroundImage: `url("header.png")` }}
     >
       <div className="h-full">
-        <div className="w-screen bg-gray-900 opacity-75 container rounded-b-lg px-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <div
+          className="w-screen container rounded-b-lg py-4 px-12 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+          style={{ backgroundColor: "rgba(17, 24, 39, 0.75" }}
+        >
           <div className="w-full flex items-center justify-between">
             <a
               className="flex items-center space text-primary no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
@@ -39,21 +42,37 @@ export const LandingPageHero = () => {
         <div className="container pt-24 px-12 mx-auto md:pt-36 flex flex-wrap flex-col md:flex-row items-center">
           <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
             <h1 className="my-4 text-3xl md:text-5xl text-white font-bold leading-tight text-center md:text-left">
-              <span className="text-primary">Technical Solutions</span>
-              {"\u00A0"} to upgrade your business.
+              <span className="text-primary">Technical Solutions</span>&nbsp;to
+              upgrade your business.
             </h1>
             <p className="leading-normal text-primary text-base md:text-2xl mb-8 text-center md:text-left">
               Providing solutions to fill the gaps with your business&apos;s
               needs. Taking business logic and workflows to the next level.
             </p>
 
-            <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+            <form
+              className="w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
+              style={{ backgroundColor: "rgba(17, 24, 39, 0.75" }}
+            >
               <div className="mb-4">
                 <label
-                  className="block text-primary py-2 font-bold mb-2"
+                  className="block text-primary font-bold mb-2"
+                  htmlFor="textarea"
+                >
+                  How can we assist with your technical needs?
+                </label>
+                <textarea
+                  className="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+                  id="textarea"
+                  rows={4}
+                  cols={50}
+                  placeholder="I am looking for some assistance with..."
+                />
+                <label
+                  className="block text-primary font-bold mb-2"
                   htmlFor="emailaddress"
                 >
-                  Signup for our exclusive deals.
+                  Provide your email so we can assist you.
                 </label>
                 <input
                   className="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
@@ -63,14 +82,14 @@ export const LandingPageHero = () => {
                 />
               </div>
 
-              <div className="flex items-center justify-between pt-4">
-                <GradientButton title="Sign Up" />
+              <div className="flex items-center justify-between pt-2">
+                <GradientButton title="Submit" />
               </div>
             </form>
           </div>
           <div className="w-full xl:w-3/5 p-12 overflow-hidden">
             <img
-              className="mx-auto rounded-full w-full md:w-4/5 transform -rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6"
+              className="mx-auto rounded-full h-full w-full md:w-4/5 transform rotate-6 transition hover:scale-105 duration-700 ease-in-out hover:rotate-6"
               src="heroimage.jpg"
             />
           </div>
