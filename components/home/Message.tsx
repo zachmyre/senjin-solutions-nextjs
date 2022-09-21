@@ -1,6 +1,6 @@
 export const Message = () => {
   return (
-    <div className="flex flex-col mt-10 mx-auto max-w-7xl px-4 sm:mt-8 sm:px-6 md:mt-16 lg:px-8">
+    <div className="w-full px-4 sm:px-6 lg:px-8">
       <div className="w-full">
         <div className="flex items-center justify-between">
           <div className="w-2/3 flex flex-col space-y-4">
