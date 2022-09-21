@@ -40,7 +40,7 @@ export const LandingPageHero = () => {
           <div className="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
             <h1 className="my-4 text-3xl md:text-5xl text-white font-bold leading-tight text-center md:text-left">
               <span className="text-primary">Technical Solutions</span>
-              &nbsp;to upgrade your business.
+              {"\u00A0"} to upgrade your business.
             </h1>
             <p className="leading-normal text-primary text-base md:text-2xl mb-8 text-center md:text-left">
               Providing solutions to fill the gaps with your business's needs.
@@ -76,7 +76,7 @@ export const LandingPageHero = () => {
           </div>
 
           <div className="w-full text-primary pt-16 pb-6 text-sm text-center md:text-left fade-in">
-            Powered by&nbsp;
+            Powered by{"\u00A0"}
             <a className="text-gray-500 no-underline hover:no-underline">
               Senjin Solutions
             </a>
