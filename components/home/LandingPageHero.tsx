@@ -43,8 +43,8 @@ export const LandingPageHero = () => {
               {"\u00A0"} to upgrade your business.
             </h1>
             <p className="leading-normal text-primary text-base md:text-2xl mb-8 text-center md:text-left">
-              Providing solutions to fill the gaps with your business's needs.
-              Taking business logic and workflows to the next level.
+              Providing solutions to fill the gaps with your business&apos;s
+              needs. Taking business logic and workflows to the next level.
             </p>
 
             <form className="bg-gray-900 opacity-75 w-full shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
