@@ -1,9 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  env: {
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY
+  images: {
+    domains: ['upload.wikimedia.org', ]
   }
 }
-
-module.exports = nextConfig
