@@ -10,16 +10,18 @@ import {
   Navbar,
   Sponsor,
   TopCreator,
+  Services
 } from '@/components';
 import React from 'react';
 import { Reveal } from 'react-awesome-reveal';
 import { fadeInDownShorter } from '@/keyframes';
 const Home = () => {
   return (
-    <div className='h-screen main_bg text-white overflow-hidden' id='top'>
+    <div className='h-full main_bg text-white overflow-hidden' id='top'>
       <Navbar />
       <Hero />
-      <Sponsor />
+      <Services />
+      {/* <Sponsor /> */}
       {/* 
       <AboutUs />
       <Collections />

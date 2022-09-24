@@ -13,6 +13,8 @@ import Navbar from './Navbar';
 import NFTItem from './NFTItem';
 import Sponsor from './Sponsor';
 import TopCreator from './TopCreator';
+import Services from './Services';
+import ServiceCard from './ServiceCard';
 
 export {
   FAQ,
@@ -30,4 +32,6 @@ export {
   Container,
   Input,
   Hero,
+  Services,
+  ServiceCard
 };
