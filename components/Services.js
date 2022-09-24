@@ -6,7 +6,7 @@ import { fadeInDownShorter, fadeInDownShorter2 } from '@/keyframes';
 const Services = () => {
   return (
     <Container className={'flex flex-col sm:flex-row'}>
-    <div className='w-full sm:w-[50%] pr-0 sm:pr-10 lg:pr-20 mt-16'>
+    <div className='w-full pr-0 sm:pr-10 lg:pr-20 mt-16'>
       <div className='text-center mb-8'>
         <h2 className='font-bold text-3xl mb-2'>IT Consulting</h2>
         <Reveal keyframes={fadeInDownShorter2} duration={800} delay={100}>
@@ -28,7 +28,7 @@ const Services = () => {
       </div>
    
    {/* ******************************************************************** */}
-   <div className='w-full sm:w-[50%] pr-0 sm:pr-10 lg:pr-20 mt-16'>
+   <div className='w-full pr-0 sm:pr-10 lg:pr-20 mt-16'>
       <div className='text-center mb-8'>
         <h2 className='font-bold text-3xl mb-2'>Tech Upgrades</h2>
         <Reveal keyframes={fadeInDownShorter2} duration={800} delay={100}>
