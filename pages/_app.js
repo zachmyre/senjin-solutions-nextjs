@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }) {
           property='twitter:image'
           content={process.env.NEXT_PUBLIC_MAIN_URL + 'logo.png'}
         />
-        <link rel='shortcut icon' href='/favicon.svg' type='image/x-icon' />
+        <link rel='shortcut icon' href='/favicon.png' type='image/x-icon' />
       </Head>
       <Component {...pageProps} />
     </>
