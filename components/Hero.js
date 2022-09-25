@@ -23,7 +23,7 @@ const Hero = () => {
           <div className="my-4">
           <Reveal keyframes={fadeInUp} duration={1000} delay={200}>
             <form action="./" method="post">
-              <label className="block text-md font-600 mb-2" for="email">Provide your email, we will get in touch.</label>
+              <label className="block text-md font-600 mb-2" htmlFor="email">Provide your email, we will get in touch.</label>
               <input className="shadow appearance-none border border-white rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline focus:border-purple-500" type="text" id="email" name="email" />
             </form>
           </Reveal>
