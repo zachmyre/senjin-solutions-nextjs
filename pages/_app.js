@@ -6,16 +6,16 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Senjin Solutions - IT Consulting and Specialists</title>
-        <meta name='title' content='PsychoArt - NFT Marketplace' />
-        <meta name='description' content='Buy & sale nft online' />
-        <meta name='keywords' content='nft, marketplace' />
+        <meta name='title' content='Senjin Solutions' />
+        <meta name='description' content='IT Consulting and Technology Solutions' />
+        <meta name='keywords' content='it consulting, technology solutions, tech upgrades' />
         <meta name='robots' content='index, follow' />
         <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={process.env.NEXT_PUBLIC_MAIN_URL} />
-        <meta property='og:title' content='PsychoArt - NFT Marketplace' />
-        <meta property='og:description' content='Buy & sale nft online' />
+        <meta property='og:title' content='Senjin Solutions' />
+        <meta property='og:description' content='IT Consulting and Technology Solutions' />
         <meta
           property='og:image'
           content={process.env.NEXT_PUBLIC_MAIN_URL + 'logo.png'}
@@ -31,8 +31,8 @@ function MyApp({ Component, pageProps }) {
           property='twitter:url'
           content={process.env.NEXT_PUBLIC_MAIN_URL}
         />
-        <meta property='twitter:title' content='PsychoArt - NFT Marketplace' />
-        <meta property='twitter:description' content='Buy & sale nft online' />
+        <meta property='twitter:title' content='Senjin Solutions' />
+        <meta property='twitter:description' content='IT Consulting and Technology Solutions' />
         <meta
           property='twitter:image'
           content={process.env.NEXT_PUBLIC_MAIN_URL + 'logo.png'}
