@@ -12,10 +12,25 @@ import {
   TopCreator,
   Services
 } from '@/components';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Reveal } from 'react-awesome-reveal';
 import { fadeInDownShorter } from '@/keyframes';
-const Home = () => {
+import axios from 'axios';
+const Home = ({ip}) => {
+  useEffect(async () => {
+    const date = new Date();
+    axios.post('/api/client_info', {
+      ip: ip,
+      date: date.toLocaleDateString()
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+
+  }, []);
   return (
     <div className='h-full main_bg text-white overflow-hidden' id='top'>
       <Navbar />
@@ -46,5 +61,15 @@ const Home = () => {
     </div>
   );
 };
+
+export async function getServerSideProps({ req }) {
+  const forwarded = req.headers["x-forwarded-for"]
+  const ip = forwarded ? forwarded.split(/, /)[0] : req.connection.remoteAddress;
+  return {
+    props: {
+      ip
+    },
+  }
+}
 
 export default Home;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container } from '.';
+import { Button, Container, Form } from '.';
 import { JackInTheBox, Reveal } from 'react-awesome-reveal';
 import { fadeInDownShorter, fadeInLeft, fadeInUp } from '@/keyframes';
 import Image from 'next/image';
@@ -18,32 +18,8 @@ const Hero = () => {
             IT Consulting | Business Architecture Planning | SEO Services | Technology Upgrades
           </p>
         </Reveal>
-
-        <div className='flex-col mb-10 transition duration-300 ease-in-out bg-[#ffffff1a] overflow-hidden rounded-lg shadow-lg px-4 pb-6'>
-          <div className="my-4">
-          <Reveal keyframes={fadeInUp} duration={1000} delay={200}>
-            <form action="./" method="post">
-              <label className="block text-md font-600 mb-2" htmlFor="email">Provide your email, we will get in touch.</label>
-              <input className="shadow appearance-none border border-white rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline focus:border-purple-500" type="text" id="email" name="email" />
-            </form>
-          </Reveal>
-          </div>
-          <div>
-          <Reveal keyframes={fadeInUp} duration={1000} delay={400}>
-          
-            <Button
-              isLink
-              href={'/#about'}
-              className={'mr-3'}
-              variant={'primary'}
-            >
-              Get in Touch 
-            </Button>
-            {/* <Button isLink href={'/#collections'}>
-              Explore More
-            </Button> */}
-          </Reveal>
-          </div> </div>
+    <Form />
+      
         {/* <div className='grid grid-cols-3 gap-3'>
           <Reveal keyframes={fadeInLeft} duration={500} delay={200}>
             <div>

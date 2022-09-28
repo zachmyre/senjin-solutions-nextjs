@@ -15,6 +15,7 @@ import Sponsor from './Sponsor';
 import TopCreator from './TopCreator';
 import Services from './Services';
 import ServiceCard from './ServiceCard';
+import Form from './Form';
 
 export {
   FAQ,
@@ -33,5 +34,6 @@ export {
   Input,
   Hero,
   Services,
-  ServiceCard
+  ServiceCard,
+  Form
 };
